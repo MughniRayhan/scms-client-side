@@ -37,7 +37,7 @@ const Banner = () => {
             backgroundPosition: "center",
           }}>
              
-              <div className="absolute sm:bottom-20 bottom-10 left-0 text-center  w-full bg-gray-800/50 bg-opacity-20  text-xl font-semibold p-4">
+              <div className="absolute sm:bottom-20 bottom-10 left-0 text-center  w-full bg-base-200/50 bg-opacity-20  text-xl font-semibold p-4">
                 <h2 className='text-2xl   sm:text-3xl lg:text-5xl font-bold text-secondary'>{slide.caption} <span className='text-green-200'>{slide.cap}</span></h2>
                 <p className='text-sm  text-white py-4 '>{slide.des}</p>
               </div>

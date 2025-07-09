@@ -6,8 +6,9 @@
   default: true;
   --color-primary: #fe7743;
   --color-secondary: #73ec8b;
-  --color-base-100: #d7d7d7;
-  --color-base-200: #213448;
+  --color-base-100: #f6f5f5;
+  --color-base-200: #0e2148;
+  --color-accent: "#0e2148";
 }
 
 .urbanist-font {
