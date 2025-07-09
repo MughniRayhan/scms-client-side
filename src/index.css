@@ -6,8 +6,8 @@
   default: true;
   --color-primary: #fe7743;
   --color-secondary: #73ec8b;
-  --color-base-100: #0b0c10;
-  --color-base-200: #686d76;
+  --color-base-100: #d7d7d7;
+  --color-base-200: #213448;
 }
 
 .urbanist-font {
@@ -24,4 +24,13 @@ nav a.active {
 
 footer a.active {
   color: #73ec8b;
+}
+
+@layer utilities {
+  @media (max-width: 639px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important;
+    }
+  }
 }

@@ -8,7 +8,7 @@ function Navbar() {
     <li><NavLink to='/courts'>Courts</NavLink></li>
     </>
   return (
-    <nav className="navbar bg-base-100 w-full shadow-sm px-5  flex justify-between border-b border-base-200">
+    <nav className="navbar bg-base-200 min-w-screen shadow-sm px-5  flex justify-between ">
   <div className="navbar-start  w-full lg:w-[20%] flex  sm:justify-start justify-between ">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -16,7 +16,7 @@ function Navbar() {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow text-white ">
+        className="menu menu-sm dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow text-white">
        {NavItems}
         <div className='sm:hidden block'>
             <Link to='/login'><button className="btn bg-primary border-none font-semibold">Login</button></Link>
@@ -25,7 +25,7 @@ function Navbar() {
     </div>
     <Logo/>
   </div>
-  <div className="navbar-center hidden lg:flex  justify-center ">
+  <div className="navbar-center hidden lg:flex  justify-center w-[50%] ">
     <ul className="menu menu-horizontal px-1 text-base font-semibold text-white">
       {NavItems}
     </ul>
