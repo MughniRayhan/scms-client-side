@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <section className=" text-gray-800 py-16 px-4 sm:px-6 lg:px-20"
-    data-aos="fade-up"  data-aos-duration="5000" data-aos-anchor-placement="center-bottom"
+    data-aos="fade-up"   
     >
       <div className="max-w-7xl mx-auto">
         {/* Title + Subtitle */}
