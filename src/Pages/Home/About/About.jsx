@@ -44,14 +44,14 @@ const About = () => {
         </div>
 
         {/* Mission */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-4">
             <img src={mission} alt="" className='rounded-xl'
             data-aos="fade-right"  
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"/>
 
           {/* Mission */}
-          <div className="bg-base-200 rounded-xl shadow-md p-8" 
+          <div className="bg-base-200 rounded-xl shadow-md p-8 " 
           data-aos="fade-left" 
           data-aos-offset="300"
           data-aos-easing="ease-in-sine">
