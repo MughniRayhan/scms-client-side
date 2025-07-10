@@ -1,5 +1,6 @@
 import React from 'react'
-
+import history from '../../../assets/history.jpg'
+import mission from '../../../assets/mission.jpg'
 const About = () => {
   return (
     <section className=" text-gray-800 py-16 px-4 sm:px-6 lg:px-20"
@@ -36,6 +37,18 @@ const About = () => {
               celebrating both recreational fun and athletic excellence.
             </p>
           </div>
+            <img src={history} alt="" className='rounded-xl'
+            data-aos="fade-left"  
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"/>
+        </div>
+
+        {/* Mission */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <img src={mission} alt="" className='rounded-xl'
+            data-aos="fade-right"  
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"/>
 
           {/* Mission */}
           <div className="bg-base-200 rounded-xl shadow-md p-8" 
