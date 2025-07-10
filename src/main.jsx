@@ -5,12 +5,15 @@ import App from './App.jsx'
 import { RouterProvider } from "react-router";
 import { router } from './Router/Router.jsx';
 import 'leaflet/dist/leaflet.css';
+import AuthProvider from './Context/AuthContext/AuthProvider.jsx';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <div className='urbanist-font'>
-     <RouterProvider router={router} />
+     <AuthProvider>
+      <RouterProvider router={router} />
+     </AuthProvider>
    </div>
   </StrictMode>,
 )
