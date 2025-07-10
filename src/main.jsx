@@ -6,11 +6,18 @@ import { RouterProvider } from "react-router";
 import { router } from './Router/Router.jsx';
 import 'leaflet/dist/leaflet.css';
 import AuthProvider from './Context/AuthContext/AuthProvider.jsx';
+import { ToastContainer } from 'react-toastify';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init({
+      once: false, 
+    });
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <div className='urbanist-font'>
+    <ToastContainer />
      <AuthProvider>
       <RouterProvider router={router} />
      </AuthProvider>
