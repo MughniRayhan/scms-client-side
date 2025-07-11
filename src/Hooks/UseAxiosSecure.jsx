@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
     })
 
 function UseAxiosSecure() {
-  const {user} = UseAuth();
+  const {user,logOut} = UseAuth();
   const navigate = useNavigate();
  
  useEffect(() => {

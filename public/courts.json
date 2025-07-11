@@ -1,0 +1,62 @@
+[
+  {
+    "image": "https://images.pexels.com/photos/1619860/pexels-photo-1619860.jpeg?cs=srgb&dl=pexels-pixelcop-1619860.jpg&fm=jpg",
+    "type": "Tennis Court",
+    "slots": ["6AM-7AM", "7AM-8AM", "8AM-9AM", "9AM-10AM"],
+    "pricePerSession": 20
+  },
+  {
+    "image": "https://media.istockphoto.com/id/1040174716/photo/line-on-green-badminton-court.jpg?s=612x612&w=0&k=20&c=kfE4sJDWUpKvFJy5v4SIZO_t-PHwE9rubf1x540U3lc=",
+    "type": "Badminton Court",
+    "slots": ["5PM-6PM", "6PM-7PM", "7PM-8PM", "8PM-9PM"],
+    "pricePerSession": 15
+  },
+  {
+    "image": "https://r.profitroom.pl/bluewatershotel/images/attractions/1730206106.shutterstock_2394024089.jpg",
+    "type": "Squash Court",
+    "slots": ["10AM-11AM", "11AM-12PM", "12PM-1PM", "1PM-2PM"],
+    "pricePerSession": 18
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1521412644187-c49fa049e84d",
+    "type": "Basketball Court",
+    "slots": ["2PM-3PM", "3PM-4PM", "4PM-5PM", "5PM-6PM"],
+    "pricePerSession": 25
+  },
+  {
+    "image": "https://5.imimg.com/data5/RC/SQ/MY-37114643/football-turf-grass-500x500.jpg",
+    "type": "Football Turf",
+    "slots": ["6PM-7PM", "7PM-8PM", "8PM-9PM", "9PM-10PM"],
+    "pricePerSession": 30
+  },
+  {
+    "image": "https://cdn.prod.website-files.com/632871e15b53a0140af28aeb/671bf1d389bb200b00e30fe2_6477f93c74c85d877d239c21_1.jpg",
+    "type": "Volleyball Court",
+    "slots": ["4PM-5PM", "5PM-6PM", "6PM-7PM", "7PM-8PM"],
+    "pricePerSession": 22
+  },
+  {
+    "image": "https://media.istockphoto.com/id/1425158165/photo/table-tennis-ping-pong-paddles-and-white-ball-on-blue-board.jpg?s=612x612&w=0&k=20&c=KSdi4bEGoxdhaGMnl6CZaqTLbKbobArgrrpLem3oN98=",
+    "type": "Table Tennis",
+    "slots": ["2PM-3PM", "3PM-4PM", "4PM-5PM", "5PM-6PM"],
+    "pricePerSession": 10
+  },
+  {
+    "image": "https://media.istockphoto.com/id/1040174716/photo/line-on-green-badminton-court.jpg?s=612x612&w=0&k=20&c=kfE4sJDWUpKvFJy5v4SIZO_t-PHwE9rubf1x540U3lc=",
+    "type": "Badminton Court",
+    "slots": ["10AM-11AM", "11AM-12PM", "12PM-1PM", "1PM-2PM"],
+    "pricePerSession": 15
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1521412644187-c49fa049e84d",
+    "type": "Basketball Court",
+    "slots": ["8AM-9AM", "9AM-10AM", "10AM-11AM", "11AM-12PM"],
+    "pricePerSession": 25
+  },
+  {
+    "image": "https://images.pexels.com/photos/1619860/pexels-photo-1619860.jpeg?cs=srgb&dl=pexels-pixelcop-1619860.jpg&fm=jpg",
+    "type": "Tennis Court",
+    "slots": ["4PM-5PM", "5PM-6PM", "6PM-7PM", "7PM-8PM"],
+    "pricePerSession": 20
+  }
+]

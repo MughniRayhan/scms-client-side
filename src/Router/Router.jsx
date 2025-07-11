@@ -7,6 +7,7 @@ import Register from '../Pages/Auth/Register/Register';
 import AuthLayout from '../Layouts/AuthLayout';
 import Courts from '../Pages/Courts/Courts';
 import Forbidden from '../Pages/Forbidden/Forbidden';
+import Loader from '../Components/Loader/Loader';
 
 export const router = createBrowserRouter([
   {
@@ -19,7 +20,9 @@ export const router = createBrowserRouter([
         },
         {
           path: '/courts',
-          Component: Courts
+          Component: Courts,
+          loader: ()=> fetch("./courts.json"),
+          hydrateFallbackElement: <Loader/>
         },
         {
         path: '/forbidden',
