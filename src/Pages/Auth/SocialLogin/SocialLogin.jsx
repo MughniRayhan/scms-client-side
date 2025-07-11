@@ -2,22 +2,46 @@ import React from 'react'
 import UseAuth from '../../../Hooks/UseAuth'
 import { useLocation, useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
+import UseAxios from '../../../Hooks/UseAxios';
 
 function SocialLogin() {
     const { signInWithGoogle} = UseAuth();
     const location = useLocation();
     const navigate = useNavigate();
+   const axiosInstance = UseAxios();
+    
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(async(result) => {
+            const user = result.user;
 
-    const handleGoogleSignIn = async () => {
-    try {
-        const result = await signInWithGoogle();
-        const user = result.user;
-        toast.success("Successfully logged in");
-        navigate(location.state?.from || '/');
-    } catch (error) {
-        console.error(error.message);
+     // update userInfo in database
+    const userData = {
+    email: user.email,
+    displayName: user.displayName,
+    photoURL: user.photoURL,
+    role: "user", 
+    creation_date: new Date().toISOString(),
+    last_login: new Date().toISOString(),
+  };
+
+  try {
+    const res = await axiosInstance.post("/users", userData);
+    if (res.data.inserted) {
+    } else {
+      
     }
-};
+  } catch (error) {
+    console.error("Error saving user:", error);
+  }
+
+            toast.success("Successfully logged in")
+            navigate(location.state || '/');
+        })
+        .catch(error => {
+            console.error(error.message);
+        })
+    }
   return (
     <div className='  sm:w-[330px]'>
         <p className='text-center my-4'>OR</p>
