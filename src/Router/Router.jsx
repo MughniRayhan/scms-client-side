@@ -5,6 +5,8 @@ import Home from '../Pages/Home/Home';
 import Login from '../Pages/Auth/Login/Login';
 import Register from '../Pages/Auth/Register/Register';
 import AuthLayout from '../Layouts/AuthLayout';
+import Courts from '../Pages/Courts/Courts';
+import Forbidden from '../Pages/Forbidden/Forbidden';
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +16,15 @@ export const router = createBrowserRouter([
         {
             index: true,
             Component: Home
-        }
+        },
+        {
+          path: '/courts',
+          Component: Courts
+        },
+        {
+        path: '/forbidden',
+        Component: Forbidden
+      }
     ]
   },
   {
