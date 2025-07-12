@@ -8,6 +8,8 @@ import AuthLayout from '../Layouts/AuthLayout';
 import Courts from '../Pages/Courts/Courts';
 import Forbidden from '../Pages/Forbidden/Forbidden';
 import Loader from '../Components/Loader/Loader';
+import DashboardLayout from '../Layouts/DashboardLayout';
+import PrivateRoute from '../Routes/PrivateRoute';
 
 export const router = createBrowserRouter([
   {
@@ -44,5 +46,9 @@ export const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "/dashboard",
+    element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>, 
+  }
 ]);
 

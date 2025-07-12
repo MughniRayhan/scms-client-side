@@ -102,15 +102,14 @@ const Courts = () => {
               <div className="card-body">
                 <h2 className="card-title text-accent">{court.type}</h2>
                 <p>Price per session: ${court.pricePerSession}</p>
-<label>Select Slots</label>
+<label className="font-semibold">Select Slots:</label>
+<p className="text-sm text-gray-400">Hold down the Ctrl (windows) or Command (Mac) button to select multiple options.</p>
  <select
-  className="select select-bordered w-full mt-2"
+  className="select select-bordered w-full mt-2 h-20"
   multiple
   value={slotsByCourt[key] || []}
   onChange={(e) => handleSlotChange(e, key)}
 >
-  
-
   {court.slots.map((slot, idx) => (
     <option key={idx} value={slot}>
       {slot}

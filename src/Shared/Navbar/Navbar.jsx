@@ -55,9 +55,9 @@ function Navbar() {
               </li>
               <div className=" my-0 border-t border-white"></div>
               <li>
-                <button  className="flex items-center gap-2">
+                <NavLink to='/dashboard'  className="flex items-center gap-2">
                   <FaTachometerAlt /> Dashboard
-                </button>
+                </NavLink>
               </li>
               <li>
                 <button onClick={handleLogOut} className="flex items-center gap-2 text-primary">
@@ -112,9 +112,9 @@ function Navbar() {
               </li>
               <div className=" my-0 border-t border-white"></div>
               <li>
-                <button  className="flex items-center gap-2">
+                <NavLink to='/dashboard'  className="flex items-center gap-2">
                   <FaTachometerAlt /> Dashboard
-                </button>
+                </NavLink>
               </li>
               <li>
                 <button onClick={handleLogOut} className="flex items-center gap-2 text-primary">
