@@ -10,6 +10,8 @@ import Forbidden from '../Pages/Forbidden/Forbidden';
 import Loader from '../Components/Loader/Loader';
 import DashboardLayout from '../Layouts/DashboardLayout';
 import PrivateRoute from '../Routes/PrivateRoute';
+import DashboardHome from '../Pages/Dashboard/DashboardHome/DashboardHome';
+import MyProfile from '../Pages/Dashboard/MyProfile/MyProfile';
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +51,16 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>, 
+    children: [
+      {
+        index: true,
+        Component: DashboardHome
+      },
+      {
+        path: 'myProfile',
+        Component: MyProfile
+      }
+    ]
   }
 ]);
 

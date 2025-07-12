@@ -35,3 +35,8 @@ footer a.active {
     }
   }
 }
+
+.dashboard_routes.active {
+  background-color: #233555;
+  padding: 2px 8px;
+}

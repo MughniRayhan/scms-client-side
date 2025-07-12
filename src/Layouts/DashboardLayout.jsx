@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, Outlet } from 'react-router'
 import Logo from '../Shared/Logo/Logo'
 import { FaTachometerAlt } from 'react-icons/fa'
-
+import { FaUserCircle } from "react-icons/fa";
 function DashboardLayout() {
    
    
@@ -12,7 +12,7 @@ function DashboardLayout() {
   <div className="drawer-content flex flex-col ">
    
         {/* Navbar */}
-    <div className="navbar bg-base-300 w-full lg:hidden">
+    <div className="navbar bg-base-200 text-white w-full lg:hidden">
       <div className="flex-none ">
         <label htmlFor="my-drawer-2" aria-label="open sidebar" className="btn btn-square btn-ghost">
           <svg
@@ -57,11 +57,13 @@ function DashboardLayout() {
     <div ><Logo/></div>
   </div>
        <div className='mb-4 hidden lg:block border-b border-base-100/30 pb-4'><Logo/></div>    
-     <NavLink to='/dashboard'  className="flex items-center gap-2 mt-5 text-lg  dashboard_page">
+     <NavLink to='/dashboard'  className="flex items-center gap-2 mt-5 text-lg  ">
      <FaTachometerAlt /> Dashboard
     </NavLink>
     
-    
+    <NavLink to="/dashboard/myProfile" className="flex items-center gap-2 mt-5 text-lg dashboard_routes">
+  <FaUserCircle /> My Profile
+</NavLink>
     </ul>
   </div>
 </div>
