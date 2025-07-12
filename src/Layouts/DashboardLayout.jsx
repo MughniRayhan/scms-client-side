@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router'
 import Logo from '../Shared/Logo/Logo'
-import { FaTachometerAlt } from 'react-icons/fa'
+import { FaClock, FaTachometerAlt } from 'react-icons/fa'
 import { FaUserCircle } from "react-icons/fa";
 function DashboardLayout() {
    
@@ -61,8 +61,13 @@ function DashboardLayout() {
      <FaTachometerAlt /> Dashboard
     </NavLink>
     
-    <NavLink to="/dashboard/myProfile" className="flex items-center gap-2 mt-5 text-lg dashboard_routes">
+    <NavLink to="/dashboard/myProfile" className="flex items-center gap-2 mt-5 text-lg dashboard_page">
   <FaUserCircle /> My Profile
+</NavLink>
+
+<NavLink
+  to='/dashboard/pendingBookings' className="flex items-center gap-2 mt-5 text-lg dashboard_page">
+  <FaClock /> Pending Bookings
 </NavLink>
     </ul>
   </div>

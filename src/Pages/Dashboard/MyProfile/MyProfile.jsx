@@ -5,6 +5,7 @@ import { MdVerifiedUser } from 'react-icons/md';
 import UseAxiosSecure from '../../../Hooks/UseAxiosSecure';
 import UseAuth from '../../../Hooks/UseAuth';
 import profilebg from '../../../assets/profilebg.jpg'
+import Loader from '../../../Components/Loader/Loader';
 const MyProfile = () => {
   const { user } = UseAuth();
   const axiosSecure = UseAxiosSecure();
@@ -22,7 +23,7 @@ const MyProfile = () => {
   });
 
   if (isLoading) {
-    return <div className="text-center py-10">Loading...</div>;
+    return <Loader/>;
   }
 
   if (isError || !dbUser) {

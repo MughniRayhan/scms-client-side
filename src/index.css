@@ -36,7 +36,7 @@ footer a.active {
   }
 }
 
-.dashboard_routes.active {
+.dashboard_page.active {
   background-color: #233555;
   padding: 2px 8px;
 }
