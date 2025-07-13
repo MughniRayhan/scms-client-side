@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router'
 import Logo from '../Shared/Logo/Logo'
-import { FaClock, FaTachometerAlt } from 'react-icons/fa'
+import { FaBullhorn, FaCheckSquare, FaClock, FaTachometerAlt } from 'react-icons/fa'
 import { FaUserCircle } from "react-icons/fa";
 function DashboardLayout() {
    
@@ -68,6 +68,14 @@ function DashboardLayout() {
 <NavLink
   to='/dashboard/pendingBookings' className="flex items-center gap-2 mt-5 text-lg dashboard_page">
   <FaClock /> Pending Bookings
+</NavLink>
+
+<NavLink to="/dashboard/announcements" className="flex items-center gap-2 mt-5 text-lg dashboard_page">
+  <FaBullhorn /> Announcements
+</NavLink>
+
+<NavLink to="/dashboard/manageBookingsApproval" className="flex items-center gap-2 mt-5 text-lg dashboard_page">
+  <FaCheckSquare /> Manage Bookings Approval
 </NavLink>
     </ul>
   </div>

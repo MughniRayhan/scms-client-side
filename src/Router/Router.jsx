@@ -13,6 +13,8 @@ import PrivateRoute from '../Routes/PrivateRoute';
 import DashboardHome from '../Pages/Dashboard/DashboardHome/DashboardHome';
 import MyProfile from '../Pages/Dashboard/MyProfile/MyProfile';
 import PendingBookings from '../Pages/Dashboard/PendingBookings/PendingBookings';
+import Announcements from '../Pages/Dashboard/Announcement/Announcements';
+import ManageBookingsApproval from '../Pages/Dashboard/ManageBookingsApproval/ManageBookingsApproval';
 
 export const router = createBrowserRouter([
   {
@@ -64,6 +66,14 @@ export const router = createBrowserRouter([
       {
         path: 'pendingBookings',
         Component: PendingBookings
+      },
+      {
+        path:'announcements',
+        Component: Announcements
+      },
+      {
+        path: 'manageBookingsApproval',
+        Component: ManageBookingsApproval
       }
     ]
   }
