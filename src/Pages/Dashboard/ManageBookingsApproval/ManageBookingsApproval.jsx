@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 import UseAxiosSecure from '../../../Hooks/UseAxiosSecure';
 import Loader from '../../../Components/Loader/Loader';
 
@@ -24,10 +24,21 @@ const ManageBookingsApproval = () => {
       return res.data;
     },
     onSuccess: () => {
-      toast.success('Booking approved and user promoted to member');
+      Swal.fire({
+        icon: 'success',
+        title: 'Approved!',
+        text: 'Booking approved and user promoted to member.',
+        timer: 2000,
+        showConfirmButton: false
+      });
       queryClient.invalidateQueries(['pendingBookings']);
     },
-    onError: () => toast.error('Approval failed'),
+    onError: () =>
+      Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        text: 'Approval failed. Try again.',
+      }),
   });
 
   // Reject mutation
@@ -37,20 +48,31 @@ const ManageBookingsApproval = () => {
       return res.data;
     },
     onSuccess: () => {
-      toast.success('Booking rejected and removed');
+      Swal.fire({
+        icon: 'success',
+        title: 'Rejected!',
+        text: 'Booking rejected and removed.',
+        timer: 2000,
+        showConfirmButton: false
+      });
       queryClient.invalidateQueries(['pendingBookings']);
     },
-    onError: () => toast.error('Rejection failed'),
+    onError: () =>
+      Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        text: 'Rejection failed. Try again.',
+      }),
   });
 
   if (isLoading) return <div><Loader/></div>;
 
   return (
-    <div className=" px-12 py-10 bg-white  shadow-md min-h-screen ">
+    <div className="px-12 py-10 bg-white shadow-md min-h-screen">
       <h2 className="text-3xl font-extrabold text-accent mb-2">Manage Bookings Approval</h2>
 
       <div className="overflow-x-auto border bg-white border-gray-300 rounded-lg mt-6">
-        <table className="table  w-full">
+        <table className="table w-full">
           <thead className="bg-secondary font-bold text-gray-700">
             <tr>
               <th>#</th>
@@ -102,4 +124,3 @@ const ManageBookingsApproval = () => {
 };
 
 export default ManageBookingsApproval;
-
