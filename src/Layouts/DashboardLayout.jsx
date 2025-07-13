@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router'
 import Logo from '../Shared/Logo/Logo'
-import { FaBullhorn, FaCheckSquare, FaClock, FaTachometerAlt, FaUsers, FaUsersCog } from 'react-icons/fa'
+import { FaBullhorn, FaCheckSquare, FaClock, FaLayerGroup, FaTachometerAlt, FaUsers, FaUsersCog } from 'react-icons/fa'
 import { FaUserCircle } from "react-icons/fa";
 import useUserRole from '../Hooks/useUserRole';
 
@@ -91,6 +91,10 @@ function DashboardLayout() {
 <NavLink
   to='/dashboard/allUsers'  className="flex items-center gap-2 mt-5 text-lg dashboard_page">
   <FaUsers /> All Users
+</NavLink>
+
+<NavLink to='/dashboard/manage-courts' className="flex items-center gap-2 mt-3 text-lg dashboard_page">
+  <FaLayerGroup /> Manage Courts
 </NavLink>
   </>
 }

@@ -18,6 +18,7 @@ import ManageBookingsApproval from '../Pages/Dashboard/ManageBookingsApproval/Ma
 import AdminRoute from '../Routes/AdminRoute';
 import ManageMembers from '../Pages/Dashboard/ManageMembers/ManageMembers';
 import AllUsers from '../Pages/Dashboard/AllUsers/AllUsers';
+import ManageCourts from '../Pages/Dashboard/ManageCourts/ManageCourts';
 
 export const router = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ export const router = createBrowserRouter([
       {
         path: 'allUsers',
         element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
+      },
+      {
+        path: 'manage-courts',
+        element:<AdminRoute><ManageCourts></ManageCourts></AdminRoute>
       }
     ]
   }
