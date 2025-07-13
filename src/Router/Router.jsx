@@ -15,6 +15,7 @@ import MyProfile from '../Pages/Dashboard/MyProfile/MyProfile';
 import PendingBookings from '../Pages/Dashboard/PendingBookings/PendingBookings';
 import Announcements from '../Pages/Dashboard/Announcement/Announcements';
 import ManageBookingsApproval from '../Pages/Dashboard/ManageBookingsApproval/ManageBookingsApproval';
+import AdminRoute from '../Routes/AdminRoute';
 
 export const router = createBrowserRouter([
   {
@@ -73,7 +74,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'manageBookingsApproval',
-        Component: ManageBookingsApproval
+        element: <AdminRoute><ManageBookingsApproval></ManageBookingsApproval></AdminRoute>
       }
     ]
   }
