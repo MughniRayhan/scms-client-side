@@ -16,6 +16,7 @@ import PendingBookings from '../Pages/Dashboard/PendingBookings/PendingBookings'
 import Announcements from '../Pages/Dashboard/Announcement/Announcements';
 import ManageBookingsApproval from '../Pages/Dashboard/ManageBookingsApproval/ManageBookingsApproval';
 import AdminRoute from '../Routes/AdminRoute';
+import ManageMembers from '../Pages/Dashboard/ManageMembers/ManageMembers';
 
 export const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ export const router = createBrowserRouter([
       {
         path: 'manageBookingsApproval',
         element: <AdminRoute><ManageBookingsApproval></ManageBookingsApproval></AdminRoute>
+      },
+      {
+        path: 'manageMembers',
+        element:<AdminRoute><ManageMembers></ManageMembers></AdminRoute>
       }
     ]
   }
