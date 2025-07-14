@@ -96,6 +96,10 @@ function DashboardLayout() {
 <NavLink to='/dashboard/manage-courts' className="flex items-center gap-2 mt-3 text-lg dashboard_page">
   <FaLayerGroup /> Manage Courts
 </NavLink>
+
+<NavLink to='/dashboard/make-announcement' className="flex items-center gap-2 mt-3 text-lg dashboard_page">
+  <FaBullhorn /> Make Announcement
+</NavLink>
   </>
 }
     </ul>
