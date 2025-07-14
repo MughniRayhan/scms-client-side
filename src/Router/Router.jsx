@@ -20,6 +20,8 @@ import ManageMembers from '../Pages/Dashboard/ManageMembers/ManageMembers';
 import AllUsers from '../Pages/Dashboard/AllUsers/AllUsers';
 import ManageCourts from '../Pages/Dashboard/ManageCourts/ManageCourts';
 import MakeAnnouncement from '../Pages/Dashboard/MakeAnnouncement/MakeAnnouncement';
+import MemberRoute from '../Routes/MemberRoute';
+import ApprovedBookings from '../Pages/Dashboard/ApprovedBookings/ApprovedBookings';
 
 export const router = createBrowserRouter([
   {
@@ -95,6 +97,10 @@ export const router = createBrowserRouter([
       {
         path: 'make-announcement',
         element: <AdminRoute><MakeAnnouncement></MakeAnnouncement></AdminRoute>
+      },
+      {
+        path: 'approved-bookings',
+        element:<MemberRoute><ApprovedBookings></ApprovedBookings></MemberRoute>
       }
     ]
   }
