@@ -67,14 +67,19 @@ function DashboardLayout() {
   <FaUserCircle /> My Profile
 </NavLink>
 
+{
+  !roleLoading && (role==="member" || role==="user") &&
+  <>
+  <NavLink to="/dashboard/announcements" className="flex items-center gap-2 mt-5 text-lg dashboard_page">
+  <FaBullhorn /> Announcements
+</NavLink>
+
 <NavLink
   to='/dashboard/pendingBookings' className="flex items-center gap-2 mt-5 text-lg dashboard_page">
   <FaClock /> Pending Bookings
 </NavLink>
-
-<NavLink to="/dashboard/announcements" className="flex items-center gap-2 mt-5 text-lg dashboard_page">
-  <FaBullhorn /> Announcements
-</NavLink>
+  </>
+}
 
 {
   !roleLoading && role==="member" &&
