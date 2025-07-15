@@ -25,6 +25,7 @@ import ApprovedBookings from '../Pages/Dashboard/ApprovedBookings/ApprovedBookin
 import Payment from '../Pages/Dashboard/Payment/Payment';
 import PaymentHistory from '../Pages/Dashboard/PaymentHistory/PaymentHistory';
 import ConfirmedBookings from '../Pages/Dashboard/ConfirmedBookings/ConfirmedBookings';
+import ManageBookings from '../Pages/Dashboard/ManageBookings/ManageBookings';
 
 export const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ export const router = createBrowserRouter([
       {
         path: 'make-announcement',
         element: <AdminRoute><MakeAnnouncement></MakeAnnouncement></AdminRoute>
+      },
+      {
+        path: 'manageBookings',
+        element: <AdminRoute><ManageBookings></ManageBookings></AdminRoute>
       },
       {
         path: 'approved-bookings',
