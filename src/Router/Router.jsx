@@ -22,6 +22,7 @@ import ManageCourts from '../Pages/Dashboard/ManageCourts/ManageCourts';
 import MakeAnnouncement from '../Pages/Dashboard/MakeAnnouncement/MakeAnnouncement';
 import MemberRoute from '../Routes/MemberRoute';
 import ApprovedBookings from '../Pages/Dashboard/ApprovedBookings/ApprovedBookings';
+import Payment from '../Pages/Dashboard/Payment/Payment';
 
 export const router = createBrowserRouter([
   {
@@ -101,7 +102,11 @@ export const router = createBrowserRouter([
       {
         path: 'approved-bookings',
         element:<MemberRoute><ApprovedBookings></ApprovedBookings></MemberRoute>
-      }
+      },
+      {
+        path: "payment/:id",
+        element: <MemberRoute><Payment></Payment></MemberRoute>
+      },
     ]
   }
 ]);

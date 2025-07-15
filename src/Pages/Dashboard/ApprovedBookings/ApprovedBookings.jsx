@@ -65,7 +65,7 @@ const ApprovedBookings = () => {
                 <td className="capitalize">{booking.status}</td>
                 <td className="flex gap-2">
                   <Link
-                    to='/'
+                    to={`/dashboard/payment/${booking._id}`}
                     className="btn btn-primary btn-sm flex items-center gap-2"
                   >
                     <FaMoneyCheckAlt /> Pay

@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router'
 import Logo from '../Shared/Logo/Logo'
-import { FaBullhorn, FaCheckCircle, FaCheckSquare, FaClock, FaLayerGroup, FaTachometerAlt, FaUsers, FaUsersCog } from 'react-icons/fa'
+import { FaBullhorn, FaCheckCircle, FaCheckSquare, FaClock, FaLayerGroup, FaMoneyCheckAlt, FaTachometerAlt, FaUsers, FaUsersCog } from 'react-icons/fa'
 import { FaUserCircle } from "react-icons/fa";
 import useUserRole from '../Hooks/useUserRole';
 
@@ -81,6 +81,7 @@ function DashboardLayout() {
   </>
 }
 
+{/* members routes */}
 {
   !roleLoading && role==="member" &&
   <>
@@ -88,6 +89,7 @@ function DashboardLayout() {
   to='/dashboard/approved-bookings'  className="flex items-center gap-2 mt-5 text-lg dashboard_page">
   <FaCheckCircle />  Approved Bookings
 </NavLink>
+
   </> 
 }
 
