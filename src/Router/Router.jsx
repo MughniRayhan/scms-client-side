@@ -24,6 +24,7 @@ import MemberRoute from '../Routes/MemberRoute';
 import ApprovedBookings from '../Pages/Dashboard/ApprovedBookings/ApprovedBookings';
 import Payment from '../Pages/Dashboard/Payment/Payment';
 import PaymentHistory from '../Pages/Dashboard/PaymentHistory/PaymentHistory';
+import ConfirmedBookings from '../Pages/Dashboard/ConfirmedBookings/ConfirmedBookings';
 
 export const router = createBrowserRouter([
   {
@@ -111,6 +112,10 @@ export const router = createBrowserRouter([
       {
         path: 'paymentHistory',
         element: <MemberRoute><PaymentHistory></PaymentHistory></MemberRoute>
+      },
+      {
+        path: 'confirmedBookings',
+        element: <MemberRoute><ConfirmedBookings></ConfirmedBookings></MemberRoute>
       }
     ]
   }

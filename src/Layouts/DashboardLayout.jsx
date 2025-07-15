@@ -93,6 +93,11 @@ function DashboardLayout() {
 <NavLink to="/dashboard/paymentHistory" className="flex items-center gap-2 mt-5 text-lg dashboard_page">
   <FaMoneyCheck /> Payment History
 </NavLink>
+
+<NavLink to="/dashboard/confirmedBookings" className="flex items-center gap-2 mt-5 text-lg dashboard_page">
+  <FaCheckCircle /> Confirmed Bookings
+</NavLink>
+
   </> 
 }
 
