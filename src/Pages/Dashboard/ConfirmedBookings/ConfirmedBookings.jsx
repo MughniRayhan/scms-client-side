@@ -9,17 +9,35 @@ const ConfirmedBookings = () => {
   const { user } = UseAuth();
 
   // Fetch confirmed bookings for the logged-in user
-  const { data: bookings = [], isLoading } = useQuery({
-    queryKey: ['confirmedBookings', user.email],
-    queryFn: async () => {
-      const res = await axiosSecure.get(`/bookings/confirmed/${user.email}`);
-      return res.data;
-    }
-  });
+  const { data, isLoading } = useQuery({
+  queryKey: ['confirmedBookingsAndPayments', user.email],
+  queryFn: async () => {
+    const [bookingsRes, paymentsRes] = await Promise.all([
+      axiosSecure.get(`/bookings/confirmed/${user.email}`),
+      axiosSecure.get(`/payments/user/${user.email}`)
+    ]);
+
+    return {
+      bookings: bookingsRes.data,
+      payments: paymentsRes.data
+    };
+  }
+});
 
   
 
   if (isLoading) return <Loader />;
+
+const { bookings, payments } = data;
+
+const mergedBookings = bookings.map(booking => {
+  const payment = payments.find(p => p.bookingId === booking._id);
+
+  return {
+    ...booking,
+    paidPrice: payment ? payment.price : booking.price // use paid price if exists, else original
+  };
+});
 
   return (
     <div className="p-8 bg-white min-h-screen">
@@ -41,13 +59,13 @@ const ConfirmedBookings = () => {
               </tr>
             </thead>
             <tbody>
-              {bookings.map((booking, index) => (
+              {mergedBookings.map((booking, index) => (
                 <tr key={booking._id}>
                   <td>{index + 1}</td>
                   <td>{booking.courtType}</td>
                   <td>{booking.slots.join(', ')}</td>
                   <td>{booking.date}</td>
-                  <td>${booking.price}</td>
+                  <td>${booking.paidPrice}</td>
                   <td className="text-green-600 font-bold">{booking.status}</td>
                 </tr>
               ))}
