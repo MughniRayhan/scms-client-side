@@ -23,6 +23,7 @@ import MakeAnnouncement from '../Pages/Dashboard/MakeAnnouncement/MakeAnnounceme
 import MemberRoute from '../Routes/MemberRoute';
 import ApprovedBookings from '../Pages/Dashboard/ApprovedBookings/ApprovedBookings';
 import Payment from '../Pages/Dashboard/Payment/Payment';
+import PaymentHistory from '../Pages/Dashboard/PaymentHistory/PaymentHistory';
 
 export const router = createBrowserRouter([
   {
@@ -107,6 +108,10 @@ export const router = createBrowserRouter([
         path: "payment/:id",
         element: <MemberRoute><Payment></Payment></MemberRoute>
       },
+      {
+        path: 'paymentHistory',
+        element: <MemberRoute><PaymentHistory></PaymentHistory></MemberRoute>
+      }
     ]
   }
 ]);
