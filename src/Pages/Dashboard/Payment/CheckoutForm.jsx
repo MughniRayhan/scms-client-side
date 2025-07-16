@@ -32,15 +32,20 @@ const CheckoutForm = () => {
   });
 
   // Create payment intent when booking is loaded
-  useEffect(() => {
-    if (booking) {
-      setFinalPrice(booking.price); // default price
+useEffect(() => {
+  if (booking) {
+    setFinalPrice(booking.price); // default price
 
-      axiosSecure.post('/create-payment-intent', { price: booking.price })
-        .then(res => setClientSecret(res.data.clientSecret))
-        .catch(err => console.error(err));
-    }
-  }, [booking, axiosSecure]);
+    axiosSecure.post('/create-payment-intent', { price: booking.price })
+      .then(res => setClientSecret(res.data.clientSecret))
+      .catch(err => console.error(err));
+
+    // Reset payment states when a new booking is loaded
+    setIsPaid(false);
+    setIsProcessing(false);
+  }
+}, [booking, axiosSecure]);
+
 
   // Apply coupon logic
   const handleApplyCoupon = () => {
@@ -118,6 +123,7 @@ const CheckoutForm = () => {
   }
 
   setIsProcessing(false); // stop loading
+  
 };
 
 

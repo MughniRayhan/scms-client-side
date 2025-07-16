@@ -11,7 +11,7 @@ const Promotions = () => {
   ];
   
   return (
-    <section className="bg-gradient-to-b from-base-200 via-base-200/70 to-base-200 text-white py-10 my-8 rounded-2xl" data-aos="zoom-in">
+    <section className="bg-gradient-to-b from-base-200 via-secondary/70 to-base-200 text-white py-10 my-8 rounded-2xl" data-aos="zoom-in">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text-primary">
           🎉 Exclusive Promotions & Discount Coupons
