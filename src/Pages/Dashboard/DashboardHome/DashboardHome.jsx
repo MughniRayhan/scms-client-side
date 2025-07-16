@@ -3,6 +3,7 @@ import useUserRole from '../../../Hooks/useUserRole';
 import Loader from '../../../Components/Loader/Loader';
 import Forbidden from '../../Forbidden/Forbidden';
 import UserDashboard from './UserDashboard';
+import AdminDashboard from './AdminDashboard';
 function DashboardHome() {
   const {role,roleLoading} = useUserRole();
 
@@ -19,7 +20,7 @@ function DashboardHome() {
   }
 
   else if(role === "admin"){
-    return "Dashboard"
+    return <AdminDashboard/>
   }
 
   else{
