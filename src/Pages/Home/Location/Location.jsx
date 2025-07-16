@@ -54,7 +54,7 @@ const Location = () => {
               href="https://www.google.com/maps/dir/?api=1&destination=23.8103,90.4125"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-6 px-6 py-2 bg-primary text-white rounded hover:bg-orange-500 transition"
+              className="inline-block mt-6 px-6 py-2 bg-primary text-white rounded hover:bg-orange-500  transform hover:scale-105 transition duration-300"
             >
               Get Directions
             </a>
