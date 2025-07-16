@@ -21,14 +21,14 @@ const Promotions = () => {
           {coupons.map((coupon, index) => (
             <div
               key={index}
-              className="bg-gradient-to-b from-primary to-orange-300 rounded-2xl text-center p-6 shadow-xl transform hover:scale-105 transition duration-300"
+              className="bg-gradient-to-b from-primary  to-orange-300 rounded-2xl text-center p-6 shadow-xl transform hover:scale-105 transition duration-300"
             >
                
-              <h3 className="text-xl font-extrabold mb-2 text-secondary">
+              <h3 className="text-xl font-extrabold mb-2 text-green-200">
                 Save {coupon.discount}!
               </h3>
-              <p className="mb-4 text-gray-800">Use Code</p>
-              <div className="bg-neutral rounded-lg px-4 py-2 text-lg font-mono tracking-widest">
+              <p className="mb-4 text-gray-800 font-semibold">Use Code</p>
+              <div className="bg-neutral rounded-lg px-4 py-2 text-lg font-mono tracking-widest text-secondary">
                 {coupon.code}
               </div>
              

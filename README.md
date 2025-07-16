@@ -2,7 +2,9 @@
 
 Welcome to **SPORTS CLUB MANAGEMENT SYSTEM**, a comprehensive MERN stack-based application for managing club bookings, court reservations, memberships, announcements, and payment processing in one place.
 
-🔗 **Live Site URL:** []()
+## 🚀 Live Demo
+
+[🔗 Click here to visit the deployed site](https://resplendent-longma-03a333.netlify.app/)
 
 👤 **Admin Login**
 
