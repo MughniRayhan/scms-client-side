@@ -4,6 +4,7 @@ import Loader from '../../../Components/Loader/Loader';
 import Forbidden from '../../Forbidden/Forbidden';
 import UserDashboard from './UserDashboard';
 import AdminDashboard from './AdminDashboard';
+import MemberDashboard from './MemberDashboard';
 function DashboardHome() {
   const {role,roleLoading} = useUserRole();
 
@@ -16,7 +17,7 @@ function DashboardHome() {
   }
 
   else if(role === "member"){
-    return "Dashboard"
+    return <MemberDashboard/>
   }
 
   else if(role === "admin"){
