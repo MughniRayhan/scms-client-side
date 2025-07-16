@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Promotions = () => {
   const coupons = [
-    { code: "ABC5", discount: "5%"},
+    { code: "SUMMER20", discount: "20%"},
     { code: "SPORT10", discount: "10%"},
     { code: "CLUB20", discount: "20%"},
   ];
@@ -31,9 +31,7 @@ const Promotions = () => {
               <div className="bg-neutral rounded-lg px-4 py-2 text-lg font-mono tracking-widest">
                 {coupon.code}
               </div>
-              <Link to='/login'><button className="mt-4 btn bg-base-100 text-primary font-extrabold w-full border-none">
-                Apply Now
-              </button></Link>
+             
             </div>
           ))}
         </div>
