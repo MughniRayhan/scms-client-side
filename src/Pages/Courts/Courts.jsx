@@ -91,7 +91,7 @@ const Courts = () => {
         {currentCourts.map((court, index) => {
           const key = court._id || index; // Use _id if available, else fallback
           return (
-            <div key={key} className="card bg-base-100 shadow-xl">
+            <div key={key} className="card bg-base-100 shadow-xl transform hover:scale-105 transition duration-300">
               <figure>
                 <img
                   src={court.image}

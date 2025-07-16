@@ -2,6 +2,7 @@ import React from 'react'
 import useUserRole from '../../../Hooks/useUserRole';
 import Loader from '../../../Components/Loader/Loader';
 import Forbidden from '../../Forbidden/Forbidden';
+import UserDashboard from './UserDashboard';
 function DashboardHome() {
   const {role,roleLoading} = useUserRole();
 
@@ -10,7 +11,7 @@ function DashboardHome() {
   }
 
   if(role === "user"){
-    return "Dashboard"
+    return <UserDashboard/>
   }
 
   else if(role === "member"){
