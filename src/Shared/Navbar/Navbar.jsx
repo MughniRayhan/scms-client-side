@@ -7,7 +7,6 @@ import { FaSignOutAlt, FaTachometerAlt } from 'react-icons/fa';
 
 function Navbar() {
   const { user, logOut, loading} = UseAuth();
-  console.log(user)
   const navigate = useNavigate();
 
   const handleLogOut = () => {

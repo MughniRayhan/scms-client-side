@@ -68,7 +68,6 @@ const onSubmit = (data) => {
         
   try {
     const res = await axios.post(uploadUrl,formData);
-  console.log(res.data)
     setProfile(res.data.data.url);
    
   } catch (error) {
