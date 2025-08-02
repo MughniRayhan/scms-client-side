@@ -14,7 +14,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="  my-7 rounded-xl overflow-hidden shadow-lg ">
+    <div className="  mb-7 overflow-hidden shadow-lg ">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -31,15 +31,16 @@ const Banner = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-full" style={{
-            backgroundImage: `linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(17, 17, 17, 0.6)),url(${slide.image})`,
+            <div className=' flex justify-center items-center pt-4 sm:px-20 px-8 place-items-center  md:justify-start h-[400px] sm:h-[650px] w-full' 
+            style={{
+            backgroundImage: `linear-gradient(to bottom right, rgba(0, 0, 1, 0.9), rgba(17, 17, 17, 0.6)),url(${slide.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}>
              
-              <div className="absolute sm:bottom-20 bottom-10 left-0 text-center  w-full bg-base-200/50 bg-opacity-20  text-xl font-semibold p-4">
-                <h2 className='text-2xl   sm:text-3xl lg:text-5xl font-bold text-secondary'>{slide.caption} <span className='text-green-200'>{slide.cap}</span></h2>
-                <p className='text-sm  text-white py-4 '>{slide.des}</p>
+              <div className="flex flex-col justify-center items-center gap-4 ml-8 sm:pt-8  w-[90%] mx-auto  text-center  order-2 sm:order-1">
+                <h2 className='text-2xl   sm:text-6xl lg:text-7xl font-bold text-secondary'>{slide.caption} <span className='text-green-200'>{slide.cap}</span></h2>
+                <p className='text-sm  text-white/80 py-4 lg:w-[50%]'>{slide.des}</p>
               </div>
             </div>
           </SwiperSlide>

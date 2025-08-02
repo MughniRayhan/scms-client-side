@@ -13,8 +13,8 @@ const position = [23.8103, 90.4125];
 
 const Location = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-20 my-8"  
-    data-aos="fade-up"  >
+    <section className="bg-white py-16 px-4 sm:px-6 lg:px-20 my-8 rounded-2xl"  
+    data-aos="fade-up" data-aos-duration="1000" >
      
         <h2 className="text-2xl sm:text-4xl font-extrabold text-center text-accent mb-2">Our <span className='text-primary'>Location</span></h2>
         <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto ">

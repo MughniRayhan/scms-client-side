@@ -11,10 +11,11 @@ const Promotions = () => {
   ];
   
   return (
-    <section className="bg-gradient-to-b from-base-200 via-secondary/70 to-base-200 text-white py-10 my-8 rounded-2xl" data-aos="zoom-in">
+    <section className="bg-base-200  text-white py-10 md:py-20 my-8 rounded-2xl" 
+    data-aos="zoom-in" data-aos-duration="1000">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-primary">
-          🎉 Exclusive Promotions & Discount Coupons
+        <h2 className="text-3xl font-bold text-center mb-8 md:mb-14 text-secondary">
+          🎉 Exclusive Promotions<span className="text-green-200"> & </span>Discount Coupons
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
