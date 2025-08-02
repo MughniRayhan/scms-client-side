@@ -8,9 +8,11 @@ function Home() {
   return (
     <div>
       <Banner/>
-      <About/>
+      <div className='max-w-7xl mx-auto'>
+        <About/>
       <Location/>
       <Promotions/>
+      </div>
     </div>
   )
 }

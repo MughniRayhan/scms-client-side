@@ -10,7 +10,7 @@ function RootLayout() {
   return (
     <div >
         <Navbar/>
-        <main className='max-w-7xl mx-auto'>
+        <main >
             {state=="loading" ? <Loader/> : <Outlet/>}
         </main>
         <Footer/>
