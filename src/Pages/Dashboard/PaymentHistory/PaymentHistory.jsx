@@ -21,7 +21,7 @@ const PaymentHistory = () => {
   if (isLoading) return <Loader />;
 
   return (
-    <div className="p-8 bg-white min-h-screen">
+    <div className="p-8 bg-white dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-accent">Payment History</h2>
 
       {/* Toggle button */}
@@ -36,9 +36,9 @@ const PaymentHistory = () => {
         <p>No payments found.</p>
       ) : viewType === 'table' ? (
         // Table view
-        <div className="overflow-x-auto border bg-white border-gray-300 rounded-lg">
+        <div className="overflow-x-auto border bg-white dark:bg-gray-800 border-gray-300 rounded-lg">
           <table className="table w-full">
-            <thead className="bg-secondary font-bold text-gray-700">
+            <thead className="bg-secondary font-bold text-gray-700 dark:bg-orange-400 dark:text-white">
               <tr>
                 <th>#</th>
                 <th>Court</th>
@@ -68,8 +68,8 @@ const PaymentHistory = () => {
         // Card view
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {payments.map(payment => (
-            <div key={payment._id} className="bg-base-200 text-white border rounded-2xl sm:p-6 p-4 shadow transform hover:scale-105 transition duration-300 w-full overflaw-hidden">
-              <h3 className="text-xl font-bold text-secondary mb-3 border-b border-primary/40 pb-2">{payment.courtType}</h3>
+            <div key={payment._id} className="bg-base-200 dark:bg-gray-800 text-white border rounded-2xl sm:p-6 p-4 shadow transform hover:scale-105 transition duration-300 w-full overflaw-hidden">
+              <h3 className="text-xl font-bold text-secondary dark:text-orange-400 mb-3 border-b border-primary/40 pb-2">{payment.courtType}</h3>
               <p className='text-gray-300 text-sm w-[95%] mb-1'><strong className='text-white'>Slots:  </strong>  {payment.slots.join(', ')}</p>
               <p className='text-gray-300 text-sm w-[95%] mb-1'><strong className='text-white'>Date:  </strong>  {payment.date}</p>
               <p className='text-gray-300 text-sm w-[95%] mb-1'><strong className='text-white'>Price:  </strong>  ${payment.price}</p>

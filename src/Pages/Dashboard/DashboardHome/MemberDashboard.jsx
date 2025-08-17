@@ -66,7 +66,7 @@ const MemberDashboard = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF'];
 
   return (
-    <div className="p-6 space-y-8">
+    <div className="p-6 space-y-8 dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold text-accent mb-4">Member Dashboard</h2>
 
       {/* Statistics cards */}
@@ -77,13 +77,13 @@ const MemberDashboard = () => {
           <Link to="/dashboard/pendingBookings" className="underline mt-2 block">View Pending</Link>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" className="bg-secondary text-gray-800 rounded-lg p-6 shadow">
+        <div data-aos="fade-up" data-aos-delay="100" className="bg-secondary dark:bg-pink-800 dark:text-white text-gray-800 rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">Approved Bookings</h3>
           <p className="text-4xl font-bold mt-2">{approvedBookings.length}</p>
           <Link to="/dashboard/approved-bookings" className="underline mt-2 block">View Approved</Link>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="200" className="bg-accent text-white rounded-lg p-6 shadow">
+        <div data-aos="fade-up" data-aos-delay="200" className="bg-accent dark:bg-green-600 text-white rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">Confirmed Bookings</h3>
           <p className="text-4xl font-bold mt-2">{confirmedBookings.length}</p>
           <Link to="/dashboard/confirmedBookings" className="underline mt-2 block">View Confirmed</Link>
@@ -91,7 +91,7 @@ const MemberDashboard = () => {
       </div>
 
       {/* Bar Chart for Bookings by Status */}
-      <div data-aos="fade-up" className="bg-white rounded-lg p-6 shadow">
+      <div data-aos="fade-up" className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
         <h3 className="text-2xl font-bold mb-4 text-primary">Your Bookings by Status</h3>
         {bookingStatusData.every(d => d.count === 0) ? (
           <p>No bookings data to show.</p>
@@ -108,7 +108,7 @@ const MemberDashboard = () => {
       </div>
 
       {/* Pie Chart for Payments */}
-      <div data-aos="fade-up" className="bg-white rounded-lg p-6 shadow">
+      <div data-aos="fade-up" className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
         <h3 className="text-2xl font-bold mb-4 text-primary">Your Payments by Court Type</h3>
         {paymentData.length === 0 ? (
           <p>No payments data to show.</p>

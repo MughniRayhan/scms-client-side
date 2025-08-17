@@ -14,7 +14,7 @@ function DashboardLayout() {
   <div className="drawer-content flex flex-col ">
    
         {/* Navbar */}
-    <div className="navbar bg-base-200 text-white w-full lg:hidden">
+    <div className="navbar bg-base-200 dark:bg-gray-900  text-white w-full lg:hidden">
       <div className="flex-none ">
         <label htmlFor="my-drawer-2" aria-label="open sidebar" className="btn btn-square btn-ghost">
           <svg

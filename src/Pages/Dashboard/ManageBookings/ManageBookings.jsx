@@ -36,7 +36,7 @@ const ManageBookings = () => {
   };
 
   return (
-    <div className="p-8 bg-white min-h-screen">
+    <div className="p-8 bg-white dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-accent">Manage Bookings</h2>
 
       {/* Search bar */}
@@ -50,9 +50,9 @@ const ManageBookings = () => {
         />
       </div>
 
-      <div className="overflow-x-auto border bg-white border-gray-300 rounded-lg">
+      <div className="overflow-x-auto border bg-white dark:bg-gray-800 border-gray-300 rounded-lg">
         <table className="table w-full">
-          <thead className="bg-secondary font-bold text-gray-700">
+          <thead className="bg-secondary dark:bg-orange-400 font-bold text-gray-700 dark:text-white">
             <tr>
               <th>#</th>
               <th>User Email</th>

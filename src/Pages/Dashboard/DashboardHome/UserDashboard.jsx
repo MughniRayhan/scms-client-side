@@ -46,24 +46,24 @@ const UserDashboard = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
   return (
-    <div className="p-6 space-y-8">
+    <div className="p-6 space-y-8 dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold text-accent mb-4">Welcome, {user.displayName}</h2>
 
       {/* Statistics cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
-        <div data-aos="fade-up" className="bg-primary text-white rounded-lg p-6 shadow">
+        <div data-aos="fade-up" className="bg-primary  text-white rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">Pending Bookings</h3>
           <p className="text-4xl font-bold mt-2 px-5 ">{pendingBookings.length}</p>
           <Link to="/dashboard/pendingBookings" className="underline mt-2 block">View</Link>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" className="bg-secondary text-gray-800 rounded-lg p-6 shadow">
+        <div data-aos="fade-up" data-aos-delay="100" className="bg-secondary dark:bg-pink-800 dark:text-white text-gray-800 rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">My Profile</h3>
           <p className="mt-2">View and update your profile information.</p>
           <Link to="/dashboard/myProfile" className="underline mt-2 block ">Go to Profile</Link>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="200" className="bg-accent text-white rounded-lg p-6 shadow">
+        <div data-aos="fade-up" data-aos-delay="200" className="bg-accent dark:bg-green-600 text-white rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">Announcements</h3>
           <p className="text-4xl font-bold mt-2">{announcements.length}</p>
           <Link to="/dashboard/announcements" className="underline mt-2 block">View</Link>
@@ -71,7 +71,7 @@ const UserDashboard = () => {
       </div>
 
       {/* Bar Chart for Pending Bookings */}
-      <div data-aos="fade-up" className="bg-white rounded-lg p-6 shadow">
+      <div data-aos="fade-up" className="bg-white rounded-lg p-6 shadow dark:bg-gray-800">
         <h3 className="text-2xl font-bold mb-4 text-primary">Pending Bookings by Court Type</h3>
         {courtTypeData.length === 0 ? (
           <p>No pending bookings data to show.</p>

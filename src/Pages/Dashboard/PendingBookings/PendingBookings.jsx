@@ -43,12 +43,12 @@ const PendingBookings = () => {
   if (isLoading) return <Loader/>;
 
   return (
-    <div className=" px-12 py-10 bg-white  shadow-md min-h-screen ">
+    <div className=" px-12 py-10 bg-white dark:bg-gray-900  shadow-md min-h-screen ">
       <h2 className="text-3xl font-extrabold text-accent mb-2">Pending Bookings</h2>
 
-      <div className="overflow-x-auto border bg-white border-gray-300 rounded-lg mt-6">
+      <div className="overflow-x-auto border bg-white dark:bg-gray-800 border-gray-300 rounded-lg mt-6">
         <table className="table  w-full">
-          <thead className="bg-secondary font-bold text-gray-700">
+          <thead className="bg-secondary font-bold text-gray-700 dark:bg-orange-400 dark:text-white">
             <tr>
               <th>#</th>
               <th>Court</th>

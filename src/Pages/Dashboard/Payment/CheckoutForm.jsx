@@ -130,7 +130,7 @@ useEffect(() => {
   if (isLoading) return <Loader/>;
 
   return (
-    <form onSubmit={handleSubmit} className=" w-[80%] mx-auto mt-10  bg-white p-6 rounded-xl shadow space-y-4">
+    <form onSubmit={handleSubmit} className=" w-[80%] mx-auto mt-10  bg-white dark:bg-gray-900 p-6 rounded-xl shadow space-y-4">
       <h2 className="text-2xl font-bold mb-4 text-center">Payment</h2>
 
       {/* Coupon code field */}
@@ -142,14 +142,14 @@ useEffect(() => {
           onChange={(e) => setCouponCode(e.target.value)}
           className="input input-bordered w-full"
         />
-        <button type="button" className="btn btn-secondary" onClick={handleApplyCoupon}>
+        <button type="button" className="btn btn-secondary dark:bg-primary dark:border-none" onClick={handleApplyCoupon}>
           Apply
         </button>
       </div>
 
-   <div className='flex flex-col md:flex-row justify-between  gap-3 w-full'>
+   <div className='flex flex-col md:flex-row justify-between  gap-3 w-full '>
        {/* Booking info fields */}
-     <div className='w-full'>
+     <div className='w-full space-y-3'>
          <div>
         <label>Email:</label>
         <input type="text" value={booking.userEmail} readOnly className="input input-bordered w-full" />
@@ -178,14 +178,14 @@ useEffect(() => {
 
      </div>
       {/* Card input */}
-      <div className='w-full md:bg-[#FAFDF0] md:p-4'>
+      <div className='w-full md:bg-[#FAFDF0] dark:md:bg-gray-800 md:p-4 dark:text-white'>
         <div>
         <label>Card Details:</label>
         <CardElement className="border p-2 rounded" />
       </div>
 
       <button type="submit" disabled={!stripe || isProcessing || isPaid}
-   className="btn btn-primary w-full mt-4 flex justify-center items-center">
+   className="btn btn-primary dark:bg-orange-500 dark:border-none w-full mt-4 flex justify-center items-center">
   {isProcessing ? (
     <span className="loading loading-spinner"></span>
   ) : isPaid ? (

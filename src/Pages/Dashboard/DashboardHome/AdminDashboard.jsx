@@ -69,7 +69,7 @@ const AdminDashboard = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
   return (
-    <div className="p-6 space-y-8">
+    <div className="p-6 space-y-8 dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold text-accent mb-4">Admin Dashboard</h2>
 
       {/* Statistics cards */}
@@ -80,19 +80,19 @@ const AdminDashboard = () => {
           <Link to="/dashboard/manageBookings" className="underline mt-2 block">Manage Bookings</Link>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="100" className="bg-secondary text-gray-800 rounded-lg p-6 shadow">
+        <div data-aos="fade-up" data-aos-delay="100" className="bg-secondary dark:bg-pink-800 dark:text-white text-gray-800 rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">Total Users</h3>
           <p className="text-4xl font-bold mt-2">{users.length}</p>
           <Link to="/dashboard/allUsers" className="underline mt-2 block">All Users</Link>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="200" className="bg-accent text-white rounded-lg p-6 shadow">
+        <div data-aos="fade-up" data-aos-delay="200" className="bg-accent dark:bg-green-600 text-white rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">Total Courts</h3>
           <p className="text-4xl font-bold mt-2">{courts.length}</p>
           <Link to="/dashboard/manageCourts" className="underline mt-2 block">Manage Courts</Link>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="300" className="bg-purple-500 text-white rounded-lg p-6 shadow">
+        <div data-aos="fade-up" data-aos-delay="300" className="bg-purple-500 dark:bg-purple-800 text-white rounded-lg p-6 shadow">
           <h3 className="text-xl font-semibold">Total Members</h3>
           <p className="text-4xl font-bold mt-2">{members.length}</p>
           <Link to="/dashboard/manageMembers" className="underline mt-2 block">Manage Members</Link>
@@ -100,7 +100,7 @@ const AdminDashboard = () => {
       </div>
 
       {/* Bar Chart for Bookings by Court Type */}
-      <div data-aos="fade-up" className="bg-white rounded-lg p-6 shadow">
+      <div data-aos="fade-up" className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
         <h3 className="text-2xl font-bold mb-4 text-primary">Bookings by Court Type</h3>
         {courtTypeData.length === 0 ? (
           <p>No bookings data to show.</p>
@@ -117,7 +117,7 @@ const AdminDashboard = () => {
       </div>
 
       {/* Pie Chart for User Roles */}
-      <div data-aos="fade-up" className="bg-white rounded-lg p-6 shadow">
+      <div data-aos="fade-up" className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow">
         <h3 className="text-2xl font-bold mb-4 text-primary">User Roles Distribution</h3>
         {roleData.length === 0 ? (
           <p>No users data to show.</p>

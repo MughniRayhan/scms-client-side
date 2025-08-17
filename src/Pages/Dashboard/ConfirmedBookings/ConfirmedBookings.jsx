@@ -40,15 +40,15 @@ const mergedBookings = bookings.map(booking => {
 });
 
   return (
-    <div className="p-8 bg-white min-h-screen">
+    <div className="p-8 bg-white dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-accent">Confirmed Bookings</h2>
 
       {bookings.length === 0 ? (
         <p>No confirmed bookings found.</p>
       ) : (
-        <div className="overflow-x-auto border bg-white border-gray-300 rounded-lg">
+        <div className="overflow-x-auto border bg-white dark:bg-gray-800 border-gray-300 rounded-lg">
           <table className="table w-full">
-            <thead className="bg-secondary font-bold text-gray-700">
+            <thead className="bg-secondary font-bold text-gray-700 dark:bg-orange-400 dark:text-white">
               <tr>
                 <th>#</th>
                 <th>Court Type</th>

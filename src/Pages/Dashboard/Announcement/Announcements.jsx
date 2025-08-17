@@ -18,19 +18,19 @@ const Announcements = () => {
   if (isLoading) return <Loader />;
 
   return (
-    <div className="p-8 bg-white min-h-screen">
+    <div className="p-8 bg-white dark:bg-gray-900 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-accent flex items-center gap-2">
         <FaBullhorn /> Announcements
       </h2>
       {announcements.length === 0 ? (
         <p>No announcements found.</p>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4 ">
           {announcements.map((announcement) => (
-            <div key={announcement._id} className="border border-secondary p-4 rounded-xl shadow transform hover:bg-base-100 transition duration-300">
-              <h3 className="text-xl font-semibold text-secondary">{announcement.title}</h3>
-              <p className="text-gray-700">{announcement.text}</p>
-              <p className="text-gray-500 text-sm">
+            <div key={announcement._id} className="border border-secondary dark:border-gray-300  dark:bg-gray-800 p-4 rounded-xl shadow transform hover:bg-base-100 transition duration-300">
+              <h3 className="text-xl font-semibold text-secondary dark:text-white">{announcement.title}</h3>
+              <p className="text-gray-700 dark:text-gray-200">{announcement.text}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">
                 {new Date(announcement.createdAt).toLocaleDateString('en-US', {
                   year: 'numeric', month: 'long', day: 'numeric'
                 })}

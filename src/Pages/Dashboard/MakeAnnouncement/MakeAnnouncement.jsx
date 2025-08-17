@@ -66,11 +66,11 @@ const MakeAnnouncement = () => {
   if (isLoading) return <Loader />;
 
   return (
-    <div className="p-8 min-h-screen bg-white">
+    <div className="p-8 min-h-screen bg-white dark:bg-gray-900">
       <h2 className="text-3xl font-bold mb-6 text-accent">Make Announcement</h2>
 
       {/* Add announcement */}
-      <div className="mb-8 border border-gray-300 p-4 rounded-xl shadow-md bg-white">
+      <div className="mb-8 border border-gray-300 p-4 rounded-xl shadow-md bg-white dark:bg-gray-800">
         <h3 className="text-xl font-semibold mb-2 flex items-center gap-2 text-accent">
           <FaPlus /> Add New Announcement
         </h3>
@@ -82,7 +82,7 @@ const MakeAnnouncement = () => {
           onChange={(e) => setNewAnnouncement(e.target.value)}
         />
         <button
-          className="btn btn-primary"
+          className="btn btn-primary dark:bg-orange-400 dark:shadow-none"
           onClick={() => addMutation.mutate(newAnnouncement)}
         >
           Add Announcement
@@ -90,14 +90,14 @@ const MakeAnnouncement = () => {
       </div>
 
       {/* Announcements list */}
-      <div className="border bg-white border-gray-300 rounded-lg mt-6 p-4">
+      <div className="border bg-white dark:bg-gray-800 border-gray-300 rounded-lg mt-6 p-4">
         <h3 className="text-xl font-semibold mb-5 text-accent text-center ">All Announcements</h3>
         {announcements.length === 0 ? (
           <p>No announcements found.</p>
         ) : (
           <ul className="space-y-3">
             {announcements.map((ann) => (
-              <li key={ann._id} className="border border-secondary p-3 rounded flex justify-between items-center ">
+              <li key={ann._id} className="border border-secondary dark:border-gray-300 p-3 rounded flex justify-between items-center ">
                 {editId === ann._id ? (
                   <>
                     <input

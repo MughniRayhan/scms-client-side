@@ -53,7 +53,7 @@ const MyProfile = () => {
   : null;
 
   return (
-    <div className="p-8 bg-white min-h-screen">
+    <div className="p-8 bg-white dark:bg-gray-900 min-h-screen">
       <div
         className="sm:w-[80%] w-full h-[80%] mx-auto rounded-lg flex flex-col items-center shadow-xl mt-10 p-4"
         style={{
@@ -68,10 +68,10 @@ const MyProfile = () => {
             alt={dbUser.displayName}
             className="w-28 h-28 rounded-full shadow-lg border-4 border-primary"
           />
-          <h2 className="sm:text-2xl text-lg font-bold mt-4 flex items-center gap-2 text-accent pb-2">
+          <h2 className="sm:text-2xl text-lg font-bold mt-4 flex items-center gap-2 text-accent dark:text-orange-400 pb-2">
             <FaUser /> {dbUser.displayName}
           </h2>
-          <div className="pt-2 border-t border-accent/50 text-accent sm:text-base text-sm">
+          <div className="pt-2 border-t border-accent/50 text-accent sm:text-base dark:text-gray-700 text-sm">
             <p className="flex items-center justify-start gap-2 mt-2 text-left ">
               <FaEnvelope className="text-primary" /> {dbUser.email}
             </p>
