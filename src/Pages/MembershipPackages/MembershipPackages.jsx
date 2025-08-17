@@ -1,27 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useUserRole from "../../Hooks/useUserRole";
+import { toast } from "react-toastify";
+import UseAuth from "../../Hooks/UseAuth";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 
 const MembershipPackages = () => {
-    const {role,roleLoading} = useUserRole();
-  const [plans, setPlans] = useState([
-    { name: "Basic", price: 20, perks: ["Access to Tennis Court", "1 Free Coaching Session", "Locker Access"] },
-    { name: "Standard", price: 35, perks: ["All Basic Perks", "Access to Badminton Court", "2 Free Coaching Sessions"] },
-    { name: "Premium", price: 50, perks: ["All Standard Perks", "Access to Gym & Squash Court", "Unlimited Coaching Sessions"] },
-  ]);
-
+    const { user } = UseAuth();
+  const { role } = useUserRole();
+  const axiosSecure = UseAxiosSecure();
+  const [plans, setPlans] = useState([]);
+  const [subscriptions, setSubscriptions] = useState([]);
   const [editingPlan, setEditingPlan] = useState(null);
   const [updatedPlan, setUpdatedPlan] = useState({ name: "", price: "", perks: [] });
+
+  const userEmail = user?.email; 
+
+  useEffect(() => {
+  fetchPlans();
+}, []);
+
+useEffect(() => {
+  if (userEmail) fetchSubscriptions();
+}, [userEmail]);
+
+  const fetchPlans = async () => {
+    const res = await axiosSecure.get("/plans");
+    setPlans(res.data);
+  };
+
+  const fetchSubscriptions = async () => {
+    const res = await axiosSecure.get(`/subscriptions/${userEmail}`);
+    setSubscriptions(res.data.map(sub => sub.planId));
+  };
+
+  const handleSubscribe = async (planId) => {
+    try {
+      await axiosSecure.post(
+        '/subscriptions',
+        { planId }
+      );
+      toast.success("Subscribed successfully!");
+      setSubscriptions(prev => [...prev, planId]);
+    } catch (err) {
+      toast.error(err.response.data.message || "Failed to subscribe");
+    }
+  };
 
   const handleEditClick = (plan, index) => {
     setEditingPlan(index);
     setUpdatedPlan(plan);
   };
 
-  const handleSave = () => {
-    const newPlans = [...plans];
-    newPlans[editingPlan] = updatedPlan;
-    setPlans(newPlans);
-    setEditingPlan(null);
+  const handleSave = async (planId) => {
+    try {
+        const { _id, ...planData } = updatedPlan;
+      await axiosSecure.put(`/plans/${planId}`, planData);
+      toast.success("Plan updated successfully!");
+      fetchPlans();
+      setEditingPlan(null);
+    } catch (err) {
+      toast.error("Failed to update plan");
+    }
   };
 
   return (
@@ -29,7 +68,7 @@ const MembershipPackages = () => {
       <h2 className="text-3xl font-bold mb-8 text-accent text-center">Membership Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {plans.map((plan, index) => (
-          <div key={index} className="card shadow-lg border border-gray-200 p-6 bg-white hover:shadow-xl transition duration-300">
+          <div key={plan._id} className="card shadow-lg border border-gray-200 p-6 bg-white hover:shadow-xl transition duration-300">
             {editingPlan === index ? (
               <div>
                 <input
@@ -48,14 +87,14 @@ const MembershipPackages = () => {
                   value={updatedPlan.perks.join(", ")}
                   onChange={(e) => setUpdatedPlan({ ...updatedPlan, perks: e.target.value.split(",") })}
                 />
-                <button className="btn btn-success w-full" onClick={handleSave}>Save</button>
+                <button className="btn btn-success w-full" onClick={() => handleSave(plan._id)}>Save</button>
               </div>
             ) : (
               <>
                 <h3 className="text-xl font-semibold mb-4">{plan.name}</h3>
                 <p className="text-2xl font-bold mb-4">${plan.price}</p>
                 <ul className="mb-6 space-y-2">
-                  {plan.perks.map((perk, idx) => (
+                  {Array.isArray(plan.perks) && plan.perks.map((perk, idx) => (
                     <li key={idx} className="flex items-center">
                       <span className="mr-2 text-green-500">✔️</span> {perk}
                     </li>
@@ -64,7 +103,13 @@ const MembershipPackages = () => {
                 {role === "admin" ? (
                   <button className="btn btn-outline btn-primary w-full" onClick={() => handleEditClick(plan, index)}>Edit Plan</button>
                 ) : (
-                  <button className="btn btn-primary w-full" >Subscribe</button>
+                  <button
+                    className={`btn ${subscriptions.includes(plan._id) ? "btn-success" : "btn-primary"} w-full`}
+                    onClick={() => handleSubscribe(plan._id)}
+                    disabled={subscriptions.includes(plan._id)}
+                  >
+                    {subscriptions.includes(plan._id) ? "Subscribed" : "Subscribe"}
+                  </button>
                 )}
               </>
             )}
