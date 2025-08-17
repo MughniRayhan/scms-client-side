@@ -68,7 +68,7 @@ useEffect(() => {
       <h2 className="text-3xl font-bold mb-8 text-accent text-center">Membership Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {plans.map((plan, index) => (
-          <div key={plan._id} className="card shadow-lg border border-gray-200 p-6 bg-white hover:shadow-xl transition duration-300">
+          <div key={plan._id} className="card shadow-lg border border-gray-200 p-6 bg-white dark:bg-gray-800 hover:shadow-xl transition duration-300">
             {editingPlan === index ? (
               <div>
                 <input

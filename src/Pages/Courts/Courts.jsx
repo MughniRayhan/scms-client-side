@@ -117,7 +117,7 @@ const Courts = () => {
         {courts.map((court, index) => {
           const key = court._id || index;
           return (
-            <div key={key} className="card bg-base-100 shadow-xl transform hover:scale-105 transition duration-300">
+            <div key={key} className="card bg-base-100 dark:bg-gray-800 shadow-xl transform hover:scale-105 transition duration-300">
               <figure>
                 <img
                   src={court.image}

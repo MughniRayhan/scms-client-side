@@ -39,7 +39,7 @@ const Banner = () => {
           }}>
              
               <div className="flex flex-col justify-center items-center gap-4 ml-8 sm:pt-8  w-[90%] mx-auto  text-center  order-2 sm:order-1">
-                <h2 className='text-2xl   sm:text-6xl lg:text-7xl font-bold text-secondary'>{slide.caption} <span className='text-green-200'>{slide.cap}</span></h2>
+                <h2 className='text-2xl   sm:text-6xl lg:text-7xl font-bold text-secondary dark:text-green-400'>{slide.caption} <span className='text-green-200 '>{slide.cap}</span></h2>
                 <p className='text-sm  text-white/80 py-4 lg:w-[50%]'>{slide.des}</p>
               </div>
             </div>

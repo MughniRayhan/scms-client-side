@@ -7,10 +7,10 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
         <div className="max-w-7xl mx-auto text-center mb-12" data-aos="fade-down" data-aos-duration="1000">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-accent mb-4">
-            About <span className='text-primary'>Our</span>  Club
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-accent dark:text-orange-400 mb-4">
+            About <span className='text-primary dark:text-gray-300'>Our</span>  Club
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             We are dedicated to making club and court management easy, efficient, and accessible for everyone.
           </p>
         </div>
@@ -19,7 +19,7 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-10">
           {/* History Card */}
           <div
-            className="bg-gradient-to-l from-accent to-accent/80   rounded-bl-3xl rounded-tr-3xl text-white shadow-lg p-8 hover:scale-105 transition duration-300"
+            className="bg-gradient-to-l from-accent to-accent/80  dark:bg-gradient-to-t dark:from-gray-800 dark:to-gray-900 rounded-bl-3xl rounded-tr-3xl text-white shadow-lg p-8 hover:scale-105 transition duration-300"
             data-aos="fade-up" data-aos-duration="1000"
           >
             <div className="flex items-center justify-center mb-4 text-5xl text-primary">
@@ -33,11 +33,11 @@ const About = () => {
 
           {/* Mission Card */}
           <div
-            className="bg-accent  rounded-3xl text-white shadow-lg p-8 hover:scale-105 transition duration-300"
+            className="bg-accent dark:bg-transparent dark:border rounded-3xl text-white shadow-lg p-8 hover:scale-105 transition duration-300"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <div className="flex items-center justify-center mb-4 text-5xl text-secondary">
+            <div className="flex items-center justify-center mb-4 text-5xl text-secondary dark:text-green-300">
               <FaBullseye />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-center ">Our Mission</h3>
@@ -48,7 +48,7 @@ const About = () => {
 
           {/* Vision Card */}
           <div
-            className="bg-gradient-to-r from-accent to-accent/80   rounded-tl-3xl rounded-br-3xl text-white shadow-lg p-8 hover:scale-105 transition duration-300"
+            className="bg-gradient-to-r from-accent to-accent/80 dark:bg-gradient-to-t dark:from-gray-800 dark:to-gray-900 rounded-tl-3xl rounded-br-3xl text-white shadow-lg p-8 hover:scale-105 transition duration-300"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
