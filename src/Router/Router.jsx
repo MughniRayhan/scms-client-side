@@ -27,6 +27,7 @@ import PaymentHistory from '../Pages/Dashboard/PaymentHistory/PaymentHistory';
 import ConfirmedBookings from '../Pages/Dashboard/ConfirmedBookings/ConfirmedBookings';
 import ManageBookings from '../Pages/Dashboard/ManageBookings/ManageBookings';
 import ManageCoupons from '../Pages/Dashboard/ManageCoupons/ManageCoupons';
+import Events from '../Pages/Events/Events';
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
           Component: Courts,
           loader: ()=> fetch("./courts.json"),
           hydrateFallbackElement: <Loader/>
+        },
+        {
+          path: '/events',
+          Component: Events
         },
         {
         path: '/forbidden',

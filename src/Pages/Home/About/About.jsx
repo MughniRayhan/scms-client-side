@@ -3,7 +3,7 @@ import { FaHistory, FaBullseye, FaLightbulb  } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section className=" text-gray-800 py-16 px-4 sm:px-6 lg:px-20">
+    <section className=" text-gray-800 py-16 px-4 sm:px-6 lg:px-20" data-aos="fade-up" data-aos-duration="2000">
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
         <div className="max-w-7xl mx-auto text-center mb-12" data-aos="fade-down" data-aos-duration="1000">

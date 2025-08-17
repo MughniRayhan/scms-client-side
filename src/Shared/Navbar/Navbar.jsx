@@ -21,14 +21,20 @@ function Navbar() {
       });
   };
 
-  // const handleDashboard = () => {
-  //   navigate('/dashboard');
-  // };
+
 
   const NavItems = (
     <>
       <li><NavLink to='/'>Home</NavLink></li>
       <li><NavLink to='/courts'>Courts</NavLink></li>
+      <li><NavLink to='/events'>Events</NavLink></li>
+      {user && (
+         <li>
+                <NavLink to='/dashboard' >
+                  Dashboard
+                </NavLink>
+              </li>
+      )}
     </>
   );
 
