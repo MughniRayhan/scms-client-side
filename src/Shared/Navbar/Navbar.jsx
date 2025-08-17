@@ -38,7 +38,7 @@ function Navbar() {
   );
 
   return (
-    <nav className="navbar bg-base-200 min-w-screen shadow-sm px-5 flex justify-between">
+    <nav className="navbar bg-base-200 min-w-screen shadow-sm px-5 flex justify-between fixed z-10">
       <div className="navbar-start w-full lg:w-[20%] flex lg:justify-start justify-between">
         
 

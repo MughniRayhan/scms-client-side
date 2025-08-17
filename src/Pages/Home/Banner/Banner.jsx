@@ -14,7 +14,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="  mb-7 overflow-hidden shadow-lg ">
+    <div className=" pt-12 mb-7 overflow-hidden shadow-lg ">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

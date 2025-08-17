@@ -78,7 +78,7 @@ const chartData = Object.entries(monthlyCounts).map(([month, count]) => ({
 }));
 
   return (
-    <div className="max-w-6xl mx-auto py-10 px-4">
+    <div className="max-w-6xl mx-auto py-10 px-4 pt-24">
       <h2 className="text-3xl font-bold mb-8 text-accent text-center">🎉 Upcoming Events</h2>
 
       {/* Chart */}
