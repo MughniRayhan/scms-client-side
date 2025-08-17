@@ -101,10 +101,10 @@ useEffect(() => {
                   ))}
                 </ul>
                 {role === "admin" ? (
-                  <button className="btn btn-outline btn-primary w-full" onClick={() => handleEditClick(plan, index)}>Edit Plan</button>
+                  <button className="btn btn-outline btn-primary dark:bg-orange-500 w-full" onClick={() => handleEditClick(plan, index)}>Edit Plan</button>
                 ) : (
                   <button
-                    className={`btn ${subscriptions.includes(plan._id) ? "btn-success" : "btn-primary"} w-full`}
+                    className={`btn ${subscriptions.includes(plan._id) ? "btn-success" : "btn-primary dark:bg-orange-500 shadow-none"} w-full`}
                     onClick={() => handleSubscribe(plan._id)}
                     disabled={subscriptions.includes(plan._id)}
                   >

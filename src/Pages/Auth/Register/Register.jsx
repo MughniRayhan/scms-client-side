@@ -90,7 +90,7 @@ const onSubmit = (data) => {
   type="file"
   onChange={handleUploadImage}
   className="file-input file-input-bordered text-white bg-base-100 
-             file:bg-secondary file:border-none file:px-4 file:py-2 file:text-white file:rounded file:cursor-pointer"
+             file:bg-secondary dark:file:bg-green-200 file:border-none file:px-4 file:py-2 file:text-white dark:file:text-green-800 file:rounded file:cursor-pointer"
 />
 
           {/* name */}

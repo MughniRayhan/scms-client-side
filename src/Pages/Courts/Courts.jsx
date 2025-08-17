@@ -13,7 +13,7 @@ const Courts = () => {
   const [slotsByCourt, setSlotsByCourt] = useState({});
   const [date, setDate] = useState("");
 
-  const [sortOrder, setSortOrder] = useState("asc"); // "asc", "desc"
+  const [sortOrder, setSortOrder] = useState(""); // "asc", "desc"
   const [courts, setCourts] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -98,20 +98,21 @@ const Courts = () => {
     }));
   };
 
+console.log("Courts received:", courts.map(c => c.pricePerSession));
   return (
     <div className="max-w-6xl mx-auto py-10 pt-24 px-4">
       <h2 className="text-3xl font-bold mb-8 text-accent">Available Courts</h2>
 
       {/* Sort dropdown */}
-      <select
-        className="select select-bordered w-40 mb-6"
-        value={sortOrder}
-        onChange={(e) => setSortOrder(e.target.value)}
-      >
-        <option value="">Default</option>
-        <option value="asc">Low to High</option>
-        <option value="desc">High to Low</option>
-      </select>
+ <select
+  className="select select-bordered w-40 mb-6"
+  value={sortOrder}
+  onChange={(e) => setSortOrder(e.target.value)}
+>
+  <option value="asc">Low to High</option>
+  <option value="desc">High to Low</option>
+</select>
+
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {courts.map((court, index) => {
@@ -162,7 +163,7 @@ const Courts = () => {
           {[...Array(totalPages).keys()].map((num) => (
             <button
               key={num}
-              className={`join-item btn ${currentPage === num + 1 ? "btn-active" : ""} bg-secondary border border-white text-white`}
+              className={`join-item btn ${currentPage === num + 1 ? "btn-active" : ""} bg-secondary dark:bg-green-700 border border-white text-white`}
               onClick={() => setCurrentPage(num + 1)}
             >
               {num + 1}
