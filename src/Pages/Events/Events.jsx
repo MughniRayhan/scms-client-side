@@ -61,7 +61,7 @@ const Events = () => {
 
   const { data: events = [] } = useQuery({
     queryKey: ["events"],
-    queryFn: async () => dummyEvents, // using static data
+    queryFn: async () => dummyEvents, 
   });
 
   // Chart data: number of events per month

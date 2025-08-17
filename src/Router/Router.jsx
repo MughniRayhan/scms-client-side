@@ -28,6 +28,7 @@ import ConfirmedBookings from '../Pages/Dashboard/ConfirmedBookings/ConfirmedBoo
 import ManageBookings from '../Pages/Dashboard/ManageBookings/ManageBookings';
 import ManageCoupons from '../Pages/Dashboard/ManageCoupons/ManageCoupons';
 import Events from '../Pages/Events/Events';
+import MembershipPackages from '../Pages/MembershipPackages/MembershipPackages';
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
         {
           path: '/events',
           Component: Events
+        },
+        {
+          path: '/membership-packages',
+          Component: MembershipPackages
         },
         {
         path: '/forbidden',

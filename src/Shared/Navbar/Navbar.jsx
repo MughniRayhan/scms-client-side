@@ -29,11 +29,10 @@ function Navbar() {
       <li><NavLink to='/courts'>Courts</NavLink></li>
       <li><NavLink to='/events'>Events</NavLink></li>
       {user && (
-         <li>
-                <NavLink to='/dashboard' >
-                  Dashboard
-                </NavLink>
-              </li>
+         <>
+         <li><NavLink to='/dashboard' >Dashboard</NavLink></li>
+         <li><NavLink to='/membership-packages'>Membership Packages</NavLink></li>
+         </>
       )}
     </>
   );
