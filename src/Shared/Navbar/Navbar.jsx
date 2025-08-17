@@ -62,6 +62,36 @@ function Navbar() {
       d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
   </svg>
 </>
+
+const toggleSmallDevice = (
+  <div className="flex flex-col justify-center items-center gap-4">
+    {/* Light mode option */}
+    <label className="flex items-center gap-2 cursor-pointer text-sm text-white">
+      <input
+        type="radio"
+        name="theme"
+        value="light"
+        checked={theme === "light"}
+        onChange={() => toggleTheme("light")}
+        className=""
+      />
+      Off
+    </label>
+
+    {/* Dark mode option */}
+    <label className="flex items-center gap-2 cursor-pointer text-sm text-white">
+      <input
+        type="radio"
+        name="theme"
+        value="dark"
+        checked={theme === "dark"}
+        onChange={() => toggleTheme("dark")}
+        className=""
+      />
+      On
+    </label>
+  </div>
+);
   const NavItems = (
     <>
       <li><NavLink to='/'>Home</NavLink></li>
@@ -77,7 +107,7 @@ function Navbar() {
   );
 
   return (
-    <nav className="navbar bg-base-200 min-w-screen shadow-sm px-5 flex justify-between fixed z-10">
+    <nav className="navbar bg-base-200 min-w-screen shadow-sm sm:px-10 px-5 flex justify-between fixed z-10">
       <div className="navbar-start w-full lg:w-[20%] flex lg:justify-start justify-between">
         
 
@@ -119,7 +149,7 @@ function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-200 rounded-box z-10 mt-3 p-2 w-30   shadow text-white relative right-3">
+            className="menu menu-sm dropdown-content bg-base-200 rounded-box z-10 mt-3 p-2 w-50   shadow text-white relative right-3">
             {NavItems}
             <div className='lg:hidden block'>
               {
@@ -130,6 +160,10 @@ function Navbar() {
                 
               }
             </div>
+             <span className="text-sm text-white">Dark Mode:</span>
+            <label className="">
+              {toggleSmallDevice}
+            </label>
           </ul>
         </div>
         
@@ -139,13 +173,10 @@ function Navbar() {
         <ul className="menu menu-horizontal px-1 text-base font-semibold text-white">
           {NavItems}
         </ul>
-        <label className="sm:swap swap-rotate text-white hidden ">
-  {/* this hidden checkbox controls the state */}
-{toggle}
-</label>
       </div>
 
-      <div className="navbar-end w-[10%] hidden lg:block">
+      <div className="navbar-end w-[10%] hidden lg:flex gap-3">
+        
         {user ? (
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -175,6 +206,10 @@ function Navbar() {
             <button className="btn bg-primary dark:bg-orange-500 border-none font-semibold hover:scale-105 transition-all duration-300 ease-in-out">Login</button>
           </Link>
         )}
+        {/* darkmode */}
+        <label className="sm:swap swap-rotate text-white hidden ">
+        {toggle}
+        </label>
       </div>
     </nav>
   );

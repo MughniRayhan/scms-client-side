@@ -78,34 +78,34 @@ const chartData = Object.entries(monthlyCounts).map(([month, count]) => ({
 }));
 
   return (
-    <div className="max-w-6xl mx-auto py-10 px-4 pt-24">
+    <div className="max-w-6xl mx-auto py-10 px-4 pt-24 ">
       <h2 className="text-3xl font-bold mb-8 text-accent text-center">🎉 Upcoming Events</h2>
 
       {/* Chart */}
-      <div className="bg-white p-4 rounded-2xl shadow-lg" data-aos="fade-up">
+      <div className=" p-4 rounded-2xl bg-white dark:bg-gray-800" data-aos="fade-up">
         <h3 className="text-xl font-semibold mb-4 text-accent">Events by Month</h3>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={chartData}>
             <XAxis dataKey="month" />
             <YAxis allowDecimals={false} />
             <Tooltip />
-            <Bar dataKey="count" fill="#1b263b" radius={[8, 8, 0, 0]} />
+            <Bar dataKey="count" fill="#8884d8" radius={[8, 8, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
 
       {/* Event Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ">
         {events.map((event) => (
           <div
             key={event._id}
             data-aos="zoom-in"
-            className="overflow-hidden hover:shadow-2xl transition-all duration-300 bg-white rounded-lg pb-3"
+            className="overflow-hidden hover:shadow-2xl transition-all duration-300 bg-white dark:bg-gray-800 rounded-lg pb-3"
           >
             <img src={event.image} alt={event.title} className="h-40 w-full object-cover" />
             <div className="p-4 space-y-2">
               <h4 className="text-lg font-bold">{event.title}</h4>
-              <p className="text-sm text-gray-600">{event.description}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">{event.description}</p>
               <p className="text-sm font-medium text-blue-600">
                 📅 {new Date(event.date).toLocaleDateString()} | 📍 {event.location}
               </p>

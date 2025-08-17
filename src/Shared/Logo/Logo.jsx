@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 
 function Logo() {
   return (
-    <Link to='/'>
+    <Link to='/' className='outline-0'>
     
         <div className='flex items-center '>
             <img src={logo} alt="" className='sm:w-[50px] w-[30px] '/>

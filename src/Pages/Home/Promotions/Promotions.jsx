@@ -14,7 +14,7 @@ const Promotions = () => {
     <section className="bg-base-200  text-white py-10 md:py-20 my-8 rounded-2xl" 
     data-aos="zoom-in" data-aos-duration="1000">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 md:mb-14 text-secondary dark:text-white">
+        <h2 className="sm:text-3xl text-xl font-bold text-center mb-8 md:mb-14 text-secondary dark:text-white">
           🎉 Exclusive Promotions<span className="text-green-200"> & </span>Discount Coupons
         </h2>
 
@@ -23,13 +23,14 @@ const Promotions = () => {
             <div
               key={index}
               className="bg-gradient-to-b from-primary  to-orange-300 rounded-2xl text-center p-6 shadow-xl transform hover:scale-105 transition duration-300"
+              
             >
                
               <h3 className="text-xl font-extrabold mb-2 text-green-200">
                 Save {coupon.discount}!
               </h3>
               <p className="mb-4 text-gray-800 font-semibold">Use Code</p>
-              <div className="bg-neutral rounded-lg px-4 py-2 text-lg font-mono tracking-widest text-secondary">
+              <div className="bg-neutral rounded-lg px-4 py-2 sm:text-lg text-sm w-full font-mono tracking-widest text-secondary dark:text-orange-500">
                 {coupon.code}
               </div>
              

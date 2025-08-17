@@ -146,7 +146,7 @@ const Courts = () => {
                 </select>
                 <button
                   onClick={() => openBookingModal(court, key)}
-                  className="btn btn-primary mt-4"
+                  className="btn btn-primary mt-4 dark:bg-orange-400 dark:border-none"
                 >
                   Book Now
                 </button>
