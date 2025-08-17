@@ -18,7 +18,7 @@ function AuthLayout() {
       data-aos="flip-left" data-aos-easing="ease-out-cubic"
     />
     </div>
-    <div className='md:flex-1 sm:p-12 p-8  bg-[#FAFDF0] min-h-screen'>
+    <div className='md:flex-1 sm:p-12 p-8  bg-[#FAFDF0] min-h-screen dark:bg-gray-900'>
         
       <Outlet/>
     </div>

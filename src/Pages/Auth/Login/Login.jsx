@@ -24,10 +24,10 @@ function Login() {
             })
     }
   return (
-    <div className=' my-10 sm:w-[70%] mx-auto w-full shadow-lg md:shadow-none'>
+    <div className=' my-10 sm:w-[70%] mx-auto w-full shadow-lg md:shadow-none  '>
         <form onSubmit={handleSubmit(onSubmit)} className='card-body'>
            <div className='mb-2'>
-             <h2 className='font-extrabold sm:text-3xl text-xl mb-1 text-accent'>Welcome Back</h2>
+             <h2 className='font-extrabold sm:text-3xl text-xl mb-1 text-accent dark:text-orange-500'>Welcome Back</h2>
             
            </div>
         <fieldset className="fieldset">
@@ -47,8 +47,8 @@ function Login() {
             errors.password?.type === 'required' && <span className='text-red-500'>Password is required</span>
           }
           
-          <button className="btn btn-neutral mt-4 sm:w-[330px] bg-primary   font-bold border-none">Login</button>
-           <div className='mt-2 text-base'>Don't have any account? <Link to='/register' className='text-secondary font-semibold underline'>Register</Link></div>
+          <button className="btn btn-neutral mt-4 sm:w-[330px] bg-primary dark:bg-orange-500  font-bold border-none">Login</button>
+           <div className='mt-2 text-base'>Don't have any account? <Link to='/register' className='text-secondary font-semibold underline dark:text-green-600'>Register</Link></div>
           
           <SocialLogin/>
         </fieldset>
